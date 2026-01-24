@@ -1,0 +1,133 @@
+@use "./variables" as vars;
+
+// Neobrutalism Utility Classes
+
+.comic-panel {
+    background-color: var(--panel-bg);
+    border: 4px solid vars.$neobrutalism-black;
+    box-shadow: 8px 8px 0px vars.$neobrutalism-black;
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        transform: translate(-4px, -4px);
+        box-shadow: 12px 12px 0px vars.$neobrutalism-black;
+        z-index: 10;
+    }
+}
+
+.comic-btn-primary {
+    background-color: vars.$electric-purple;
+    color: vars.$neobrutalism-white !important;
+    border: 4px solid vars.$neobrutalism-black;
+    box-shadow: 6px 6px 0px vars.$neobrutalism-black;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-optical-sizing: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 0 !important;
+
+    &:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 9px 9px 0px vars.$hot-pink;
+        background-color: vars.$electric-purple;
+    }
+
+    &:active {
+        transform: translate(2px, 2px);
+        box-shadow: 3px 3px 0px vars.$neobrutalism-black;
+    }
+}
+
+.comic-btn-secondary {
+    @extend .comic-btn-primary;
+    background-color: vars.$yellow;
+    color: vars.$neobrutalism-black !important;
+
+    &:hover {
+        box-shadow: 9px 9px 0px vars.$electric-purple;
+        background-color: vars.$yellow;
+    }
+}
+
+.text-stroked {
+    -webkit-text-stroke: 1.5px vars.$neobrutalism-black;
+    color: vars.$neobrutalism-white;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+}
+
+.bg-halftone {
+    background-image: radial-gradient(vars.$neobrutalism-black 15%, transparent 16%),
+        radial-gradient(vars.$neobrutalism-black 15%, transparent 16%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+// Remove tilts for cleaner neobrutalism look
+.tilt-left {
+    transform: none;
+}
+
+.tilt-right {
+    transform: none;
+}
+
+.tilt-extreme {
+    transform: none;
+}
+
+.burst-bg {
+    position: relative;
+    background-color: vars.$yellow;
+
+    &::before {
+        display: none; // Remove burst effect for cleaner neobrutalism
+    }
+}
+
+// Dark mode adjustments
+[data-theme="dark"] {
+    .comic-btn-primary {
+        background-color: vars.$deep-electric;
+
+        &:hover {
+            background-color: vars.$deep-electric;
+            box-shadow: 9px 9px 0px vars.$deep-pink;
+        }
+    }
+
+    .comic-btn-secondary {
+        background-color: vars.$gold;
+
+        &:hover {
+            background-color: vars.$gold;
+            box-shadow: 9px 9px 0px vars.$deep-electric;
+        }
+    }
+
+    .comic-panel {
+        border-color: vars.$deep-electric;
+        box-shadow: 8px 8px 0px vars.$deep-electric;
+
+        &:hover {
+            box-shadow: 12px 12px 0px vars.$deep-electric;
+        }
+    }
+}

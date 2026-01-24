@@ -1,0 +1,37 @@
+// Neobrutalism Color Palette
+// Light Mode Colors
+$primary-purple: #450693;
+$electric-purple: #8C00FF;
+$hot-pink: #FF3F7F;
+$yellow: #FFC400;
+
+// Dark Mode Variants (darker by ~30%)
+$dark-purple: #2A0458;
+$deep-electric: #5A00A0;
+$deep-pink: #CC3266;
+$gold: #CC9D00;
+
+// Structural Colors
+$neobrutalism-black: #000000;
+$neobrutalism-white: #FFFFFF;
+
+// Light Theme
+$light-bg: $neobrutalism-white;
+$light-text: $neobrutalism-black;
+$light-accent: $electric-purple;
+$light-accent-secondary: $hot-pink;
+$light-footer-text: $neobrutalism-black;
+
+// Dark Theme
+$dark-bg: #0f0f0f;
+$dark-text: $neobrutalism-white;
+$dark-accent: $deep-electric;
+$dark-accent-secondary: $deep-pink;
+$dark-footer-text: $neobrutalism-white;
+
+// Legacy comic variables (for gradual migration)
+$comic-black: $neobrutalism-black;
+$comic-white: $neobrutalism-white;
+$comic-cyan: $deep-electric;
+$comic-magenta: $deep-pink;
+$comic-yellow: $yellow;

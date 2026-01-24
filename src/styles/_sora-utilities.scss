@@ -1,0 +1,85 @@
+/* Sora Font Utility Classes */
+
+.sora-light {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sora-regular {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sora-medium {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.sora-semibold {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.sora-bold {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.sora-extrabold {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+// Apply Sora to body with regular weight
+body {
+    font-weight: 400;
+}
+
+// Medium weight for paragraphs
+p {
+    font-weight: 400;
+}
+
+// Semibold for strong emphasis
+strong,
+b {
+    font-weight: 700;
+}
+
+// Different weights for heading hierarchy
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+h6 {
+    font-weight: 500;
+}
+
+// Nav items semibold
+.nav-text {
+    font-weight: 600;
+}

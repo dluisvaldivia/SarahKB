@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./src/assests/favicon.ico" type="image/x-icon">
+
+  <!--  Google Fonts - Sora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>That's Very ADHD</title>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="src/main.jsx"></script>
+
+  <!-- Stripe payments script -->
+  <!--  <script async src="https://js.stripe.com/v3/buy-button.js"></script> -->
+
+  <!-- SMTPJS -->
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        try {
+          // Initialize Calendly Badge Widget
+          Calendly.initBadgeWidget({
+            url: 'https://calendly.com/sarahbuendia/curiosity-call',
+            text: 'Schedule time with me',
+            color: '#F6AE2D',
+            textColor: '#33648A'
+          });
+        } catch (error) {
+          console.error("Calendly failed to initialize:", error);
+          const calendlyContainer = document.getElementById("calendly-container");
+          if (calendlyContainer) {
+            calendlyContainer.innerHTML = '<p>Scheduling is currently unavailable. Please try again later or contact us directly.</p>';
+          }
+        }
+
+        // Add click event to the accessible button
+        const calendlyButton = document.getElementById("calendly-accessible-button");
+        if (calendlyButton) {
+          calendlyButton.addEventListener("click", function () {
+            Calendly.showPopupWidget('https://calendly.com/sarahbuendia/curiosity-call');
+          });
+        }
+      }; -->
+  </script>
+</body>
+
+</html>
