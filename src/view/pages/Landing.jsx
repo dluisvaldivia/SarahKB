@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero.jsx';
 import Contact from './Contact.jsx';
-import MyStory from './MyStory.jsx';
+import AboutMe from './AboutMe.jsx';
 import Calendly from '../components/Calendly.jsx';
 import WhoIsFor from '../pages/WhoIsFor.jsx';
 
@@ -15,7 +15,7 @@ export default function Landing() {
                     <Hero />
                 </div>
                 <div id="my-story" className="mb-5 py-5 comic-panel tilt-right">
-                    <MyStory />
+                    <AboutMe />
                 </div>
                 <div className="mb-5 py-5 comic-panel tilt-left">
                     <WhoIsFor />

@@ -1,7 +1,7 @@
 @use "./variables" as vars;
 @use "./themes";
 @use "./comic-style";
-@use "./sora-utilities";
+@use "./fonts";
 
 
 body,
@@ -152,9 +152,7 @@ small {
   max-width: 15vw;
 }
 
-#ICFlogo {
-  max-width: 10rem;
-}
+
 
 .nav-icon {
   color: var(--text-color);

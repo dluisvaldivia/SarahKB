@@ -57,7 +57,7 @@ export default function LanguageSwitcher() {
                     fontSize: '1rem',
                     borderWidth: '3px',
                     borderRadius: '0',
-                    padding: '0.5rem 1rem',
+                    padding: '1.2rem 1rem',
                     boxShadow: '3px 3px 0px black'
                 }}
             >

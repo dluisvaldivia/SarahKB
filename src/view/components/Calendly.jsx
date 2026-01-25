@@ -10,23 +10,24 @@ export default function Calendly() {
                         Let's chat about how ADHD coaching can help you create a life that works with your brain.
                     </p>
 
-                    {/* Calendly inline widget */}
-                    <div
-                        className="calendly-inline-widget"
-                        data-url="https://calendly.com/sarahbuendia/curiosity-call"
-                        style={{
-                            minWidth: '320px',
-                            height: '700px',
-                            border: '4px solid black',
-                            boxShadow: '8px 8px 0px black'
-                        }}
-                    ></div>
+                    {/* Calendly inline widget - Direct Iframe for immediate loading */}
+                    <div style={{
+                        minWidth: '320px',
+                        height: '1100px',
+                        border: '4px solid black',
+                        boxShadow: '8px 8px 0px black',
+                        overflow: 'hidden'
+                    }}>
+                        <iframe
+                            src="https://calendly.com/sarahbuendia/curiosity-call"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            title="Select a Date & Time - Calendly"
+                        ></iframe>
+                    </div>
 
-                    <script
-                        type="text/javascript"
-                        src="https://assets.calendly.com/assets/external/widget.js"
-                        async
-                    ></script>
+
                 </div>
             </div>
         </div>

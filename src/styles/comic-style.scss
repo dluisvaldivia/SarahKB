@@ -20,7 +20,7 @@
 }
 
 .comic-btn-primary {
-    background-color: vars.$electric-purple;
+    background-color: vars.$electric-purple !important;
     color: vars.$neobrutalism-white !important;
     border: 4px solid vars.$neobrutalism-black;
     box-shadow: 6px 6px 0px vars.$neobrutalism-black;
@@ -38,7 +38,7 @@
     &:hover {
         transform: translate(-3px, -3px);
         box-shadow: 9px 9px 0px vars.$hot-pink;
-        background-color: vars.$electric-purple;
+        background-color: vars.$electric-purple !important;
     }
 
     &:active {

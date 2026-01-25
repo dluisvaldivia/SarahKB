@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ICF from '../../assests/ICF.png';
+
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
@@ -9,7 +9,6 @@ export default function Footer() {
     return (
         <>
             <footer className="row text-white justify-content-center">
-                <img src={ICF} id="ICFlogo" alt="International Coaching Federation badge"></img>
                 <div className="text-center py-3">
 
 

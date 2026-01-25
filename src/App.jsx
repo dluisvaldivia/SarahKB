@@ -3,7 +3,7 @@ import './styles/global.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './view/components/Navbar.jsx';
 import Footer from './view/components/Footer.jsx';
-import MyStory from './view/pages/MyStory.jsx';
+import AboutMe from './view/pages/AboutMe.jsx';
 import Landing from './view/pages/Landing.jsx';
 import Contact from './view/pages/Contact.jsx';
 import NotFound from './view/pages/NotFound.jsx';
@@ -12,16 +12,23 @@ import BackToTop from './view/components/backToTop.jsx';
 import PrivacyPolicy from './view/pages/PrivacyPolicy.jsx';
 import TermsOfService from './view/pages/TermsOfService.jsx';
 import AccessibilityStatement from './view/pages/AccessibilityStatement.jsx';
-import CookieConsent from 'react-cookie-consent';
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 import { getInitialTheme, setTheme } from './controllers/themeController.js';
 import EmotionsWheel from './view/pages/EmotionsWheel.jsx';
 import SelfAssessment from './view/pages/SelfAssessment.jsx';
 import PomodoroTimer from './view/pages/PomodoroTimer.jsx';
 import Simulator from './view/pages/Simulator.jsx';
+import Services from './view/pages/Services.jsx';
 
 function App() {
+
+
   useEffect(() => {
     setTheme(getInitialTheme());
+    const isConsent = getCookieConsentValue("myWebsiteCookieConsent");
+    if (isConsent === "true") {
+      loadCalendlyScript();
+    }
   }, []);
 
   const loadCalendlyScript = () => {
@@ -39,7 +46,9 @@ function App() {
       <div className="bg-halftone"></div>
       <Navbar />
       <Routes>
+        <Route path="/services" element={<Services />} />
         <Route path="/" element={<Landing />} />
+        <Route path="/about-me" element={<AboutMe />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />

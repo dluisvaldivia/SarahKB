@@ -77,11 +77,11 @@ export default function Navbar() {
             <Link
               to="/"
               className="nav-link text-center"
-              onClick={handleLinkClick}
+              onClick={(e) => { e.preventDefault(); handleNavClick('contact-section'); }}
             >
               <IoMdContacts className="nav-icon" />
               <br />
-              <span className="nav-text" onClick={(e) => { e.preventDefault(); handleNavClick('contact-section'); }}>{t('nav.contact')}</span>
+              <span className="nav-text">{t('nav.contact')}</span>
             </Link>
           </li>
 
@@ -89,12 +89,57 @@ export default function Navbar() {
             <Link
               to="/"
               className="nav-link text-center"
-              onClick={handleLinkClick}
+              onClick={(e) => { e.preventDefault(); handleNavClick('calendly-section'); }}
             >
               <RiCalendarScheduleLine className="nav-icon" />
               <br />
-              <span className="nav-text" onClick={(e) => { e.preventDefault(); handleNavClick('calendly-section'); }}>{t('nav.schedule')}</span>
+              <span className="nav-text">{t('nav.schedule')}</span>
             </Link>
+          </li>
+
+          {/* Services Dropdown */}
+          <li className="nav-item dropdown">
+            <a
+              className="nav-link dropdown-toggle text-center"
+              href="#"
+              id="servicesDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <MdApps className="nav-icon" /> {/* Using MdApps as placeholder or find another icon like IoBriefcaseOutline if available, but staying safe with existing imports or adding new one */}
+              <br />
+              <span className="nav-text">Services</span>
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="servicesDropdown" style={{ borderRadius: '0', border: '3px solid black', boxShadow: '4px 4px 0px black' }}>
+              <li>
+                <Link
+                  to="/services?tab=individuals"
+                  className="dropdown-item"
+                  onClick={handleLinkClick}
+                >
+                  Individuals
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services?tab=parents"
+                  className="dropdown-item"
+                  onClick={handleLinkClick}
+                >
+                  Parents
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services?tab=organizations"
+                  className="dropdown-item"
+                  onClick={handleLinkClick}
+                >
+                  Organizations
+                </Link>
+              </li>
+            </ul>
           </li>
 
           {/* Free Tools Dropdown */}
