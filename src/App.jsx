@@ -12,7 +12,6 @@ import BackToTop from './view/components/backToTop.jsx';
 import PrivacyPolicy from './view/pages/PrivacyPolicy.jsx';
 import TermsOfService from './view/pages/TermsOfService.jsx';
 import AccessibilityStatement from './view/pages/AccessibilityStatement.jsx';
-import Maintenance from './view/pages/Maintenance.jsx';
 import CookieConsent from 'react-cookie-consent';
 import { getInitialTheme, setTheme } from './controllers/themeController.js';
 import EmotionsWheel from './view/pages/EmotionsWheel.jsx';
@@ -21,15 +20,6 @@ import PomodoroTimer from './view/pages/PomodoroTimer.jsx';
 import Simulator from './view/pages/Simulator.jsx';
 
 function App() {
-  // SET TO TRUE TO ENABLE MAINTENANCE MODE
-  const IS_MAINTENANCE_MODE = true;
-
-  if (IS_MAINTENANCE_MODE) {
-    return (
-      <Maintenance />
-    );
-  }
-
   useEffect(() => {
     setTheme(getInitialTheme());
   }, []);
